@@ -39,7 +39,7 @@
     <property name="max" value="160" />
     <property name="fileExtensions" value="java" />
     <property name="ignorePattern"
-      value="^package.*|^import.*|a href|href|http://|https://|ftp://" />
+      value="^package.*|^import.*|a href|href|http://|https://|ftp://|^\s*@[A-Z].*\(.*\)|.*&lt;.*&lt;.*&gt;.*&gt;.*" />
     <property name="severity" value="error" />
   </module>
   <module name="TreeWalker">
@@ -224,7 +224,7 @@
     </module>
     <module name="ClassTypeParameterName">
       <property name="format"
-        value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
+        value="(^[A-Z]{1,3}[0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
       <message key="name.invalidPattern"
         value="Class type name ''{0}'' must match pattern ''{1}''." />
     </module>
@@ -242,13 +242,13 @@
     </module>
     <module name="MethodTypeParameterName">
       <property name="format"
-        value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
+        value="(^[A-Z]{1,3}[0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
       <message key="name.invalidPattern"
         value="Method type name ''{0}'' must match pattern ''{1}''." />
     </module>
     <module name="InterfaceTypeParameterName">
       <property name="format"
-        value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
+        value="(^[A-Z]{1,3}[0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)" />
       <message key="name.invalidPattern"
         value="Interface type name ''{0}'' must match pattern ''{1}''." />
     </module>
